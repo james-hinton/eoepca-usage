@@ -1,0 +1,11 @@
+{
+  "title": "EOEPCA+ Platform / Building Block Network",
+  "description": "",
+  "network_name": "EOEPCA+",
+  "branding": {
+    "primary_color": "#F5A623",
+    "secondary_color": "#22D3EE",
+    "text_color": "#E6EDF3",
+    "background_color": "#0A1128"
+  }
+}

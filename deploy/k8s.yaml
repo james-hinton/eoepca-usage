@@ -1,0 +1,74 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: network
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: network
+  namespace: network
+  labels:
+    app: network
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: network
+  template:
+    metadata:
+      labels:
+        app: network
+    spec:
+      containers:
+        - name: network
+          image: network-viz:v4
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 80
+          resources:
+            requests:
+              cpu: 10m
+              memory: 32Mi
+            limits:
+              cpu: 200m
+              memory: 128Mi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: network
+  namespace: network
+spec:
+  selector:
+    app: network
+  ports:
+    - port: 80
+      targetPort: 80
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: network
+  namespace: network
+  annotations:
+    kubernetes.io/ingress.class: apisix
+    cert-manager.io/cluster-issuer: letsencrypt-http01-apisix
+    k8s.apisix.apache.org/http-to-https: "true"
+spec:
+  ingressClassName: apisix
+  rules:
+    - host: network.test.eoepca.org
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: network
+                port:
+                  number: 80
+  tls:
+    - hosts:
+        - network.test.eoepca.org
+      secretName: network-tls

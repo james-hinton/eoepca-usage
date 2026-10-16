@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EOEPCA+ Platform / Building Block Network</title>
+
+    <meta name="description" content="An interactive map of EOEPCA+ platforms and the Building Blocks they use or have expressed interest in.">
+    <meta name="theme-color" content="#0A1128">
+
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/fonts.css">
+</head>
+<body>
+    <div id="chart-wrapper">
+        <div id="chart-introduction">
+            <div id="chart-title">
+                <h1>The Building Block Network of</h1>
+                <h1 id="chart-title-main"><span id="title-network-name" class="central-network">...</span></h1>
+            </div>
+            <div id="chart-intro-text">
+                <p id="chart-description"></p>
+                <p class="chart-caveat"></p>
+            </div>
+        </div>
+
+        <div id="chart-container">
+            <p id="chart-loading" style="text-align: center; padding-top: 2em; color: var(--color-text); font-style: italic;">Loading visualization...</p>
+            <button id="mobile-info-btn" aria-label="About this visualization">ⓘ</button>
+            <div id="mobile-pan-hint" aria-hidden="true">
+                <span class="pan-hint-icon">👆</span>
+                <span class="pan-hint-text">Pan to explore</span>
+            </div>
+        </div>
+
+        <!-- <div id="chart-legend">
+            <div class="legend-title">How to Read This Visual</div>
+            <div class="legend-grid">
+                <div class="legend-section">
+                    <div class="legend-section-header">Shape &amp; Color</div>
+                    <div class="legend-color-items">
+                        <div class="legend-color-item">
+                            <div class="legend-swatch legend-swatch--platform"></div>
+                            <span class="legend-color-label" style="color: var(--color-platform);">Platform (ring)</span>
+                        </div>
+                        <div class="legend-color-item">
+                            <div class="legend-swatch legend-swatch--building-block"></div>
+                            <span class="legend-color-label" style="color: var(--color-building-block);">Building Block (center)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="legend-section">
+                    <div class="legend-section-header">Size</div>
+                    <div class="legend-size-row">
+                        <div class="legend-size-circles">
+                            <div class="legend-swatch legend-swatch--platform" style="width: 16px; height: 16px; opacity: 0.7;"></div>
+                            <div class="legend-swatch legend-swatch--platform" style="width: 26px; height: 26px; opacity: 0.8;"></div>
+                            <div class="legend-swatch legend-swatch--platform" style="width: 38px; height: 38px;"></div>
+                        </div>
+                        <span class="legend-description">Number of Building Blocks a platform lists</span>
+                    </div>
+                    <div class="legend-size-row">
+                        <div class="legend-size-circles">
+                            <div class="legend-swatch legend-swatch--building-block" style="width: 12px; height: 12px; opacity: 0.7;"></div>
+                            <div class="legend-swatch legend-swatch--building-block" style="width: 20px; height: 20px; opacity: 0.8;"></div>
+                            <div class="legend-swatch legend-swatch--building-block" style="width: 32px; height: 32px;"></div>
+                        </div>
+                        <span class="legend-description">Number of platforms interested in a Building Block</span>
+                    </div>
+                </div>
+
+                <div class="legend-section">
+                    <div class="legend-section-header">Lines &amp; Boundary</div>
+                    <p class="legend-text">A line connects a platform to a Building Block it uses or has expressed interest in.</p>
+                    <svg class="legend-lines-svg" viewBox="0 0 160 48" aria-hidden="true">
+                        <line x1="4" y1="12" x2="156" y2="12" stroke="#94c5d6" stroke-width="1.5" stroke-linecap="round" stroke-opacity="0.6"/>
+                        <line x1="4" y1="34" x2="156" y2="34" stroke="#94c5d6" stroke-width="1.5" stroke-linecap="round" stroke-opacity="0.6" stroke-dasharray="5 5"/>
+                    </svg>
+                    <p class="legend-description" style="margin-top: -4px;">Solid = actively using it. Dashed = interested, evaluating, or planning — not yet in active use.</p>
+                    <p class="legend-description" style="margin-top: 12px;">The dashed circle marks the boundary between the platform ring and the Building Block cloud.</p>
+                </div>
+
+            </div>
+        </div> -->
+
+        <div id="mobile-info-overlay">
+            <button id="mobile-info-close" aria-label="Close">×</button>
+            <div id="mobile-info-content"></div>
+        </div>
+
+        <div id="mobile-drawer" data-mode="idle">
+            <button id="mobile-drawer-tooltip-close" aria-label="Close">×</button>
+            <div id="mobile-drawer-tooltip-content"></div>
+        </div>
+
+    </div>
+
+    <script type="module" src="src/main.ts"></script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+{
+  "EarthCODE": [
+    "Resource Discovery",
+    "Resource Registration",
+    { "name": "Data Access", "status": "interested" },
+    { "name": "User Client", "status": "interested" },
+    { "name": "IAM", "status": "interested" },
+    { "name": "Operations", "status": "interested" },
+    { "name": "Resource Health", "status": "interested" },
+    { "name": "Application Quality", "status": "interested" },
+    { "name": "OGC API Processes", "status": "interested" }
+  ],
+  "DLR terrabyte": [
+    "IAM",
+    "Workspace",
+    "Resource Registration",
+    "Resource Discovery",
+    "openEO",
+    "OGC API Processes",
+    "Application Hub",
+    "Operations",
+    "Data Access",
+    { "name": "Data Gateway", "status": "interested" },
+    { "name": "User Client", "status": "interested" }
+  ],
+  "APEx": [
+    { "name": "Workspace", "status": "interested" },
+    { "name": "Data Gateway", "status": "interested" },
+    { "name": "Resource Health", "status": "interested" },
+    { "name": "Application Quality", "status": "interested" },
+    "openEO",
+    "OGC API Processes",
+    "Application Hub",
+    "Federated Orchestrator",
+    "Resource Registration"
+  ],
+  "ROCS": [
+    { "name": "IAM", "status": "interested" },
+    { "name": "Notification & Automation", "status": "interested" },
+    { "name": "Federated Orchestrator", "status": "interested" },
+    "Resource Discovery",
+    "OGC API Processes",
+    "Data Access"
+
+  ],
+  "Terrascope": [
+    { "name": "Notification & Automation", "status": "interested" },
+    { "name": "Workspace", "status": "interested" },
+    "Resource Discovery",
+    "Data Access",
+    "openEO"
+  ],
+  "UK DataHub": [
+    "Data Access",
+    "Resource Discovery",
+    "Application Hub",
+    { "name": "openEO", "status": "interested" },
+    { "name": "Workspace", "status": "interested" }
+  ],
+  "Greek Data Hub": [
+    "IAM",
+    "Resource Registration",
+    "Resource Discovery",
+    "Data Access",
+    "OGC API Processes"
+  ],
+  "ASCEND": [
+    { "name": "IAM", "status": "interested" },
+    { "name": "Resource Discovery", "status": "interested" },
+    { "name": "Data Access", "status": "interested" },
+    { "name": "openEO", "status": "interested" },
+    { "name": "Federated Orchestrator", "status": "interested" }
+  ],
+  "Digital Earth Canada": [
+    { "name": "User Client", "status": "interested" },
+    "Resource Discovery",
+    "OGC API Processes",
+    "Application Hub",
+    "IAM",
+    "Workspace"
+  ],
+  "CDSE": [
+    { "name": "Notification & Automation", "status": "interested" },
+    { "name": "Workspace", "status": "interested" },
+    "Resource Discovery",
+    "Data Access",
+    "openEO"
+  ],
+  "GEODES": [
+    { "name": "IAM", "status": "interested" },
+    { "name": "Operations", "status": "interested" },
+    { "name": "User Client", "status": "interested" },
+    { "name": "Federated Data Proxy", "status": "interested" },
+    { "name": "MLOps", "status": "interested" },
+    "openEO"
+  ]
+}
